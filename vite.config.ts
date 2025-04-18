@@ -18,6 +18,15 @@ export default defineConfig({
   build: {
     outDir: path.resolve(__dirname, "dist"),
     emptyOutDir: true,
+    sourcemap: true,
+    rollupOptions: {
+      output: {
+        manualChunks: undefined
+      }
+    }
   },
   base: '/recipe-manager/', // This should match your GitHub repository name
+  server: {
+    port: 3000
+  }
 });
